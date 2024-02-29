@@ -5,6 +5,7 @@ The code for my two websites, [Checkered Scissors] (https://www.checkeredscissor
 
 ## About the Projects
 + Boomerang: This code demonstrates how most of my communications between the browser page, javascript, and PHP background communicate. A non-NodeJS solution to manipulating my websites.
++ DragAndDrop: This code sample demonstrates how to make elements moveable on a webpage. This sample presents a game of Tic Tac Toe. It allows freeform movement of pieces, without the restirction of piece placement.
 + Mario: This sample, I was playing around, trying to create an 8-bit image colorizing rows of div containers.
 + Ultimate PRS: While trying to get a better understanding of React, I created this enhanced version of Paper, Rock, Scissors.
 
