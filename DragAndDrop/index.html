@@ -1,0 +1,41 @@
+<head>
+<!-- Pull in the JQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<!-- Pull in the demo's Javascript file. -->
+<script src="demo.js"></script>
+<!-- Pull in the demo's style sheet -->
+<link rel="stylesheet" href="demo.css">
+</head>
+
+
+<!-- Provide a div for the pieces. -->
+<div id="mydata">
+    <!-- Provide an initial welcome message. -->
+    <!-- Like the game pieces, use in-line style to preset the object's position. -->
+    <div id="welcome" style="text-align: center; display: block; margin-left: auto; margin-right: auto; width: 50%; top: 100px;" class="dragme">
+        <h2>Tic Tac Toe</h2>
+        <p>To start a new game, click the Start Game button.</p>
+        <p>Click the other button to toggle debug visibility.</p>
+        <p>You will be able to drag the Xs and Os around the screen.</p>
+        <p>Try out the drag and drop now by moving this bit of text.</p>
+    </div>
+</div>
+
+<!-- Provide a div for the buttons and debug fields. -->
+<div id="debugger">
+    <!-- Provide a button to restart a new game of Tic Tac Toe -->
+    <button onclick=set_pieces()>Start Game</button>
+    <!-- Provide a button that shows-hides the debug fields -->
+    <button onclick=hide_debug()>Toggle Debug</button>
+    <!-- Provide a div to house the debug fields to ease visibility changes. -->
+    <div id="debugform" class="hidden">
+        <!-- The table of inputs are used to assist piece movement tracking. -->
+        <table>
+            <tr><td>Element ID</td><td><input type="text" id="elem_name" name="elem_name" /></td></tr>
+            <tr><td>X (Dragging)</td><td><input type="text" id="elem_x" name="elem_x" /></td></tr>
+            <tr><td>Y (Dragging)</td><td><input type="text" id="elem_y" name="elem_y" /></td></tr>
+            <tr><td>X (Last Placed)</td><td><input type="text" id="TX_name" name="TX_name" /></td></tr>
+            <tr><td>Y (Last Placed)</td><td><input type="text" id="TY_name" name="TY_name" /></td></tr>
+        </table>
+    </div>
+</div>
