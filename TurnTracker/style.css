@@ -1,0 +1,44 @@
+/* Set default styling */
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    font-size: large;
+}
+
+.controls {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+}
+
+button {
+    width: 100px;
+}
+
+/* Provide a basic class to associate with the ability to drag an element */
+.dragme {
+    position:fixed;
+    top:0px;
+    left:0px;
+}
+
+/* Provide a class to style the position of the debug data. */
+#debugger {
+  position: fixed;
+  top: 200px;
+  right: 10px;
+}
+
+/* Provide a class to hide the debugger data. */
+.hidden {
+  display: none;
+}
+
+.colorme {
+  color:red;
+}
+
+.pieceframe {
+  border: solid 3px green;
+}

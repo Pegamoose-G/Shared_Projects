@@ -1,0 +1,53 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Pull in the JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Pull in the Javascript files. -->
+    <script src="script.js"></script>
+    <script src="pieces.js"></script>
+    <!-- Pull in the demo's style sheet -->
+    <link rel="stylesheet" href="style.css">
+    <title>Sample - Tracking Turns</title>
+</head>
+
+<body>
+    <!-- Define game area -->
+    <div id="playground">
+        <!-- Div for feedback -->
+        <div id="scoreboard"></div>
+        <!-- Div for game pieces -->
+        <div id="pieces"></div>
+    </div>
+    <!-- Div for controls tracking piece changes. -->
+    <div id="controls" class="controls">
+        <button type="button" onclick="set_pieces()">Set Up</button><br>
+        <button id="rec_button" type="button" onclick="game_record()" disabled>Record</button><br>
+        <button id="end_button" type="button" onclick="game_end()" disabled>End Game</button><br>
+        <button type="button" onclick="move_fwd()">Forward</button><br>
+        <button type="button" onclick="move_bwd()">Backward</button>
+    </div>
+    <!-- Provide a div for the buttons and debug fields. -->
+    <div id="debugger">
+        <!-- Provide a button that shows-hides the debug fields -->
+        <button onclick=hide_debug()>Toggle Debug</button>
+        <!-- Provide a div to house the debug fields to ease visibility changes. -->
+        <div id="debugform" class="hidden">
+            <!-- The table of inputs are used to assist piece movement tracking. -->
+            <table>
+                <tr><td>Element ID</td><td><input type="text" id="elem_name" name="elem_name" /></td></tr>
+                <tr><td>X (Dragging)</td><td><input type="text" id="elem_x" name="elem_x" /></td></tr>
+                <tr><td>Y (Dragging)</td><td><input type="text" id="elem_y" name="elem_y" /></td></tr>
+                <tr><td>X (Last Placed)</td><td><input type="text" id="TX_name" name="TX_name" /></td></tr>
+                <tr><td>Y (Last Placed)</td><td><input type="text" id="TY_name" name="TY_name" /></td></tr>
+                <tr><td>Rotation</td><td><input type="text" id="p_rot" name="p_rot" /></td></tr>
+                <tr><td>Last Piece</td><td><input type="text" id="last_piece" name="last_piece" /></td></tr>
+                <tr><td>Previous Piece</td><td><input type="text" id="prev_piece" name="prev_piece" /></td></tr>
+                <tr><td>Turn</td><td><input type="text" id="move_turn" name="move_turn" value="0" /></td></tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
